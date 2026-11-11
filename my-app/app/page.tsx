@@ -31,7 +31,7 @@ export default async function Home() {
 
   return (
     <main className="mx-auto max-w-3xl p-8">
-      <h1 className="text-3xl font-bold">Clínica Cloud</h1>
+      <h1 className="text-3xl font-bold">Clínica do 2°DS-A</h1>
       <p className="text-slate-500">Agenda de consultas em nuvem</p>
 
       <form action={agendar} className="mt-6 grid gap-3 rounded-xl border p-4">
