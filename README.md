@@ -1,4 +1,4 @@
-# Clínica Cloud
+# Clínica do 2°DS-A
 
 Sistema de agendamento médico com banco de dados em nuvem.
 
@@ -13,7 +13,11 @@ Next.js (App Router, Server Components e Server Actions), TypeScript, Tailwind C
 Três tabelas relacionadas: `pacientes`, `medicos` e `consultas` (relações 1:N).
 
 ## Deploy
-Link: COLE_O_LINK_DA_VERCEL_AQUI
+Link: https://SEU-SITE.vercel.app
 
 ## Integrantes
-- Seu nome aqui
+- André Luis de Moraes Bevilacqua Ribeiro
+- Bruno Raphael Rodrigues Leite
+- Davi de Souza Moreira
+- Michel Amorim Cruz
+- Miguel Duarte Moura
