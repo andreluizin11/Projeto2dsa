@@ -13,7 +13,7 @@ Next.js (App Router, Server Components e Server Actions), TypeScript, Tailwind C
 Três tabelas relacionadas: `pacientes`, `medicos` e `consultas` (relações 1:N).
 
 ## Deploy
-Link: https://SEU-SITE.vercel.app
+Link: https://projeto2dsa-one.vercel.app
 
 ## Integrantes
 - André Luis de Moraes Bevilacqua Ribeiro
