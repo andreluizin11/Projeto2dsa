@@ -117,9 +117,7 @@ export default async function Home() {
                   </label>
                   <label className="field">
                     Data e hora
-                    <input type="datetime-local" name="data_hora" required min="2026-01-01T00:00" max="2100-12-31T23:59" className="ingit add .
-git commit -m "Valida data e corrige fuso"
-git push
+                    <input type="datetime-local" name="data_hora" required min="2026-01-01T00:00" max="2100-12-31T23:59" className="input" />
                   </label>
                   <button className="btn btn-soft">Agendar com este médico</button>
                 </form>
