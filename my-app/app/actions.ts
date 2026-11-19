@@ -20,3 +20,20 @@ export async function agendar(formData: FormData) {
   if (error) throw new Error(error.message);
   revalidatePath("/");
 }
+
+export async function excluir(formData: FormData) {
+  const id = Number(formData.get("id"));
+  if (!Number.isInteger(id)) throw new Error("Consulta inválida.");
+
+  const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("consultas")
+    .delete()
+    .eq("id", id)
+    .select("id");
+  if (error) throw new Error(error.message);
+  if (!data || data.length === 0) {
+    throw new Error("Não foi possível excluir. Falta a policy de DELETE no Supabase.");
+  }
+  revalidatePath("/");
+}

@@ -1,5 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
-import { agendar } from "./actions";
+import { agendar, excluir } from "./actions";
 
 type Paciente = { id: number; nome: string };
 type Medico = { id: number; nome: string; especialidade: string };
@@ -154,6 +154,14 @@ export default async function Home() {
                       timeZone: "America/Sao_Paulo",
                     })}
                   </p>
+                  <details className="del">
+                    <summary>Excluir</summary>
+                    <form action={excluir}>
+                      <input type="hidden" name="id" value={c.id} />
+                      <p>Excluir esta consulta?</p>
+                      <button className="btn-danger">Sim, excluir</button>
+                    </form>
+                  </details>
                 </li>
               ))}
             </ul>

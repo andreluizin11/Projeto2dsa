@@ -81,3 +81,13 @@ button, select, input { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .btn { transition: none; }
 }
+
+/* excluir consulta (confirmação em dois passos, sem JavaScript) */
+.del { margin-top: auto; }
+.del summary { list-style: none; cursor: pointer; display: inline-block; font-size: 13px; font-weight: 600; color: #a12626; padding: 6px 10px; border-radius: 8px; }
+.del summary::-webkit-details-marker { display: none; }
+.del summary:hover { background: #fdeaea; }
+.del form { display: grid; gap: 8px; margin-top: 8px; padding: 12px; border-radius: 12px; background: #fdeaea; }
+.del form p { font-size: 13px; color: #a12626; font-weight: 600; }
+.btn-danger { border: 0; cursor: pointer; border-radius: 10px; background: #c43434; color: #fff; font-weight: 600; font-size: 14px; padding: 10px 14px; }
+.btn-danger:hover { background: #a12626; }
