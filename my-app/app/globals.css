@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #2b1117;
+  --muted: #7a6068;
+  --wine: #8c2a5c;
+  --coral: #d9643f;
+  --blush: #fbcfc9;
+  --line: #f3ddd7;
+  --paper: #fdf4f0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-wine: var(--wine);
+  --color-coral: var(--coral);
+  --color-blush: var(--blush);
+  --color-line: var(--line);
+  --color-paper: var(--paper);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, #fbe3dc 0%, transparent 60%),
+    linear-gradient(180deg, var(--paper) 0%, #fffaf8 100%);
+  background-attachment: fixed;
+}
+
+/* botão principal: gradiente vinho -> coral */
+.btn-grad {
+  background: linear-gradient(135deg, var(--wine) 0%, var(--coral) 100%);
+  box-shadow: 0 10px 24px -10px rgba(140, 42, 92, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-grad:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px -10px rgba(140, 42, 92, 0.6);
+}
+
+/* superfície "vidro" usada na navbar, chips e cards */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 30px -14px rgba(140, 42, 92, 0.25);
+}
+
+:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-grad { transition: none; }
 }
